@@ -27,8 +27,7 @@ export class AppComponent {
   selectedUserId = signal<string>('');
 
   selectedUser = computed(() => {
-    const userId = this.selectedUserId();
-    return this.users().find(user => user.id === userId); 
+    return this.users().find(user => user.id === this.selectedUserId()); 
   }); //get selectedUser () { return this.users.find((users) => users.id === this.selectedUserId)!; }
 
 

@@ -20,6 +20,7 @@ export class UserListComponent {
 
   onUserSelection() {
     this.select.emit(this.userData().id); //this.select.emit(this.userId);
+    console.log(this.userData().name);
   }
 
 }

@@ -1,4 +1,6 @@
-import { Component, input, signal, output } from '@angular/core';
+import { Component, input, signal, output, computed } from '@angular/core';
+import { User_Listing } from '../userListing';
+import { UserData } from '../user-list/user-list.model';
 
 @Component({
   selector: 'app-task-field',
@@ -8,6 +10,12 @@ import { Component, input, signal, output } from '@angular/core';
   styleUrl: './task-field.component.scss'
 })
 export class TaskFieldComponent {
-  userName = input<string>(); //@Input() userName ?: string; //@Input() userName : string | undefined;
+  
+  userName = input.required<string | undefined>(); //@Input() userName ?: string; //@Input() userName : string | undefined;
+  // users = signal<UserData[]>(User_Listing);
+
+  // selectedUser = computed(() => {
+  //   return this.users().find(user => user.id === this.selectedUserId()); 
+  // });
 
 }
