@@ -1,6 +1,6 @@
 <div>
-    <button>
-        <img src=""/>
-        <span>Yow</span>
+    <button (click)="onUserSelection()">
+        <img [src]="imagePath()" [alt]="userData().name" />
+        <span>{{ userData().name }}</span>
     </button>
 </div>

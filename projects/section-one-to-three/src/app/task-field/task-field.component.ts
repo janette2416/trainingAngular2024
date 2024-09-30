@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, signal, output } from '@angular/core';
 
 @Component({
   selector: 'app-task-field',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './task-field.component.scss'
 })
 export class TaskFieldComponent {
+  userName = input<string>(); //@Input() userName ?: string; //@Input() userName : string | undefined;
 
 }
